@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HypnosisView.h"
 
 @implementation AppDelegate
 
@@ -14,16 +15,54 @@
 
 - (void)dealloc
 {
+    [view release];
     [_window release];
     [super dealloc];
 }
 
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return view;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //Make a CGRect that is the size of the window
+    CGRect wholeWindow = [[self window] bounds];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:wholeWindow];
+    [[self window] addSubview:scrollView];
+    
+    CGRect reallyBigRect;
+    reallyBigRect.origin = CGPointZero;
+    reallyBigRect.size.width = wholeWindow.size.width * 2.0;
+    reallyBigRect.size.height = wholeWindow.size.height * 2.0;
+    [scrollView setContentSize:reallyBigRect.size];
+    
+    //center it in the scroll view
+    CGPoint offset;
+    offset.x = wholeWindow.size.width * 0.5;
+    offset.y = wholeWindow.size.height * 0.5;
+    [scrollView setContentOffset:offset];
+    
+    [scrollView setMinimumZoomScale:0.5];
+    [scrollView setMaximumZoomScale:5.0];
+    [scrollView setDelegate:self];
+
+    //Create the view
+    view = [[HypnosisView alloc] initWithFrame:reallyBigRect];
+    
+    //Set the background color to "clear"
+    [view setBackgroundColor:[UIColor clearColor]];
+    
+    //Add the view to the view hierarchy so that it appears on the window
+    [scrollView addSubview:view];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    
+    [scrollView release];
+    
+    [[self window] makeKeyAndVisible];
+    
     return YES;
 }
 

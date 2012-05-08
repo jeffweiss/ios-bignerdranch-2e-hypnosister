@@ -13,6 +13,8 @@
 		1F3E9E5D14C4DADC001F89E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F3E9E5B14C4DADC001F89E5 /* InfoPlist.strings */; };
 		1F3E9E5F14C4DADC001F89E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9E5E14C4DADC001F89E5 /* main.m */; };
 		1F3E9E6314C4DADC001F89E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9E6214C4DADC001F89E5 /* AppDelegate.m */; };
+		1F3E9E6A14C4DB01001F89E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F3E9E6914C4DB01001F89E5 /* MainWindow.xib */; };
+		1F3E9E6D14C4DC39001F89E5 /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9E6C14C4DC39001F89E5 /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,15 @@
 		1F3E9E5214C4DADC001F89E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F3E9E5414C4DADC001F89E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F3E9E5614C4DADC001F89E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1F3E9E5A14C4DADC001F89E5 /* Hypnosister-Info.plist */ = {isa = PBXFileReference; path = "Hypnosister-Info.plist"; sourceTree = "<group>"; };
+		1F3E9E5A14C4DADC001F89E5 /* Hypnosister-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hypnosister-Info.plist"; sourceTree = "<group>"; };
 		1F3E9E5C14C4DADC001F89E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F3E9E5E14C4DADC001F89E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1F3E9E6014C4DADC001F89E5 /* Hypnosister-Prefix.pch */ = {isa = PBXFileReference; path = "Hypnosister-Prefix.pch"; sourceTree = "<group>"; };
-		1F3E9E6114C4DADC001F89E5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F3E9E6014C4DADC001F89E5 /* Hypnosister-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hypnosister-Prefix.pch"; sourceTree = "<group>"; };
+		1F3E9E6114C4DADC001F89E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F3E9E6214C4DADC001F89E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F3E9E6914C4DB01001F89E5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		1F3E9E6B14C4DC39001F89E5 /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		1F3E9E6C14C4DC39001F89E5 /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,9 @@
 				1F3E9E6114C4DADC001F89E5 /* AppDelegate.h */,
 				1F3E9E6214C4DADC001F89E5 /* AppDelegate.m */,
 				1F3E9E5914C4DADC001F89E5 /* Supporting Files */,
+				1F3E9E6914C4DB01001F89E5 /* MainWindow.xib */,
+				1F3E9E6B14C4DC39001F89E5 /* HypnosisView.h */,
+				1F3E9E6C14C4DC39001F89E5 /* HypnosisView.m */,
 			);
 			path = Hypnosister;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3E9E5D14C4DADC001F89E5 /* InfoPlist.strings in Resources */,
+				1F3E9E6A14C4DB01001F89E5 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +162,7 @@
 			files = (
 				1F3E9E5F14C4DADC001F89E5 /* main.m in Sources */,
 				1F3E9E6314C4DADC001F89E5 /* AppDelegate.m in Sources */,
+				1F3E9E6D14C4DC39001F89E5 /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
